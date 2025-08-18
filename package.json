@@ -1,0 +1,27 @@
+{
+  "name": "chikrice-types",
+  "version": "1.0.1",
+  "description": "Shared TypeScript types for Chikrice app",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn run build",
+    "prepublishOnly": "yarn run build"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "chikrice"
+  ],
+  "author": "Khaled Javdan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mongoose": "5.7.7",
+    "typescript": "^5.0.0"
+  }
+}
