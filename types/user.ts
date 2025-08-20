@@ -2,6 +2,8 @@ import type { Types } from 'mongoose';
 import type { MealPreferences } from './meal-preferences';
 
 export interface UserBase {
+  _id?: Types.ObjectId;
+  id?: Types.ObjectId;
   name: string;
   email: string;
   age: number;
@@ -26,7 +28,7 @@ interface Address {
   notes?: string | null;
 }
 
-export interface UserClient {
+export interface UserClient extends UserBase {
   startWeight?: number | null;
   currentWeight?: number | null;
   targetWeight?: number | null;

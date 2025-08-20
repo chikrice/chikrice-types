@@ -24,6 +24,8 @@ interface ChangePoint {
 }
 
 export interface PlanReference {
+  _id?: Types.ObjectId;
+  id?: Types.ObjectId;
   planId: Types.ObjectId;
   name: string;
   date: Date;
@@ -32,6 +34,7 @@ export interface PlanReference {
 
 export interface Milestone {
   _id?: Types.ObjectId;
+  id?: Types.ObjectId;
   month: number;
   plans: PlanReference[] | null;
   startWeight: number;
@@ -66,7 +69,8 @@ export interface Overview {
 }
 
 export interface RoadmapType {
-  _id: Types.ObjectId;
+  _id?: Types.ObjectId;
+  id?: Types.ObjectId;
   userId: Types.ObjectId;
   overview: Overview;
   milestones: Milestone[];

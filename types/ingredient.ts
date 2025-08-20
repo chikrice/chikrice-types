@@ -1,4 +1,7 @@
 import type { Macros } from './plan';
+import type { Types } from 'mongoose';
+
+// -------------------------------------
 
 export interface NutrientFacts extends Macros {
   cal: number;
@@ -31,8 +34,9 @@ export enum IngredientCategory {
   BEVERAGES = 'beverages',
 }
 
-export interface Ingredient {
-  _id?: string;
+export interface IngredientType {
+  _id: Types.ObjectId;
+  id?: Types.ObjectId;
   icon?: string;
   prepType: 'none' | 'daily' | 'batch';
   name: LocalizedString;
@@ -43,10 +47,4 @@ export interface Ingredient {
   serving: Serving;
   createdAt?: Date;
   updatedAt?: Date;
-}
-
-export interface Ingrediets {
-  carb: Ingredient[];
-  pro: Ingredient[];
-  fat: Ingredient[];
 }
